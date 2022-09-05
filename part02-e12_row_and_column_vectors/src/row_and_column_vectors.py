@@ -3,10 +3,10 @@
 import numpy as np
 
 def get_row_vectors(a):
-    return []
+    return [row.reshape(1, len(row)) for row in a]
 
 def get_column_vectors(a):
-    return []
+    return [col.reshape(len(col), 1) for col in a.T]
 
 def main():
     np.random.seed(0)
